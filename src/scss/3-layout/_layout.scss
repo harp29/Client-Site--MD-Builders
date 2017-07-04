@@ -1,0 +1,27 @@
+@import "../5-helper/mixins";
+
+*,
+*:after,
+*:before{
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+body{
+  background-color: transparent;
+  font-size: $paragraph-font-size;
+  color: $text-color;
+  font-family: $paragraph-font-family;
+}
+
+.xs-hidden{
+  display: none;
+  @include desktop{
+    display: block;
+  }
+}
+
+img{
+  max-width: 100%;
+}

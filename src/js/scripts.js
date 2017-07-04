@@ -1,14 +1,21 @@
-global.jQuery = require('jquery');
-bootstrap = require('bootstrap');
-mustache = require('mustache');
 
-jQuery(document).ready(function($){
-  // var jqxhr = $.getJSON('data.json', function(){
-  //
-  // }).done(function(data){
-  //   var template = $('#template').html();
-  //   var showTemplate = mustache.render(template, data);
-  //   $('#gallery').html(showTemplate);
-  // }
+var jQuery = $ = require('jquery');
+require('gsap');
+
+$(document).ready(function(){
+
+  animations();
+
+  $("#js-glitch-img").noisy({
+    _w: 300,
+    _h: 600,
+    img: "img/developer-test.jpg",
+    delay: 2000
+  });
+
+  $(window).resize(function(){
+    setHeight();
+  })
+
 
 });

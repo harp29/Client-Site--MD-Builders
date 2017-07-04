@@ -1,0 +1,44 @@
+@font-face{
+  font-family: 'Butler Light';
+  src: url('../fonts/Butler_Light_Stencil.otf');
+}
+
+$white:          #FFFFFF;
+$black:          #000000;
+
+$text-color:  $white;
+
+$paragraph-font-size: 1.4rem;
+$paragraph-font-family: 'Butler Light', sans-serif;
+
+// navigation
+$menu-anchor-font-size: 1.4rem;
+$menu-achor-color: $white;
+
+// heading
+$heading-color: $black;
+$heading-font-family: 'Work Sans', sans-serif;
+$heading-font-weight: 100;
+
+//sass map function - use for heading tags
+$heading-font-size: (
+  h1: 40px,
+  h2: 36px,
+  h3: 32px,
+  h4: 28px,
+  h5: 24px,
+  h6: 20px
+);
+
+//visit
+$visit-text-color: $white;
+
+//grid & responsive - sass map
+$breakpoints: (
+    phone: 480px,
+    tablet: 768px,
+    desktop: 1024px
+);
+
+$columns: 12;
+$grid-max-width: 1200px;

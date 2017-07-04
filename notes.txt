@@ -1,0 +1,11 @@
+#1
+  Content adjustment - done
+  Image scale issue: slow down - done
+  resize landing page to 100vh
+  favicon
+
+----------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------

@@ -1,0 +1,49 @@
+@mixin phone{
+  @media only screen and (min-width: map-get($breakpoints, 'phone')){
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media only screen and (min-width: map-get($breakpoints, 'tablet')){
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media only screen and (min-width: map-get($breakpoints, 'desktop')){
+    @content;
+  }
+}
+
+@mixin clearfix{
+  *zoom:1;
+  &:before,
+  &:after{
+    content: '';
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+@mixin border-box{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+// TEXT MIXIN - SETS STYLES AND SIZES FOR A GIVEN TEXT BLOCK:
+@mixin text($fontSize, $letterSpacing,$wordSpacing,$textTransform,$color){
+    // font-family: $font;
+    font-size: $fontSize;
+    // font-weight: $fontWeight;
+
+    letter-spacing: $letterSpacing;
+    word-spacing: $wordSpacing;
+    text-transform: $textTransform;
+
+    color: $color;
+}

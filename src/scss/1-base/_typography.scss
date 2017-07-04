@@ -1,0 +1,30 @@
+@import "variables";
+@import "../5-helper/mixins";
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+}
+
+a{
+  @include text(80%,3px,0px,none, $text-color);
+  @media only screen and(max-width: 728px){
+    font-size: 50%;
+  }
+  @media only screen and(min-width: 728px){
+    font-size: 90%;
+  }
+  font: $paragraph-font-family;
+  text-decoration: none;
+  line-height: 170%;
+  transition: color .3s;
+
+  &:hover{
+    text-decoration: none;
+    color: #19a37b;
+  }
+}
+
+p{
+  font-size: $paragraph-font-size;
+}

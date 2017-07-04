@@ -14,9 +14,11 @@ var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var cssmin = require('gulp-cssmin');
 var htmlmin = require('gulp-htmlmin');
+var postcss = require('postcss-scss');
+
 
 var SOURCEPATHS = {
-  sassSource : 'src/scss/*.scss',
+  sassSource : 'src/scss/*/*.scss',
   sassApp: 'src/scss/app.scss',
   htmlSource : 'src/*.html',
   htmlPartialSource : 'src/partial/*.html',
@@ -82,6 +84,7 @@ gulp.task('compresscss', function(){
 
   var sassFiles;
   sassFiles = gulp.src(SOURCEPATHS.sassSource)
+
       .pipe(autoprefixer())
       .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 

@@ -1,27 +1,38 @@
 @font-face{
-  font-family: 'Butler Light';
-  src: url('../fonts/Butler_Light_Stencil.otf');
+  font-family: 'SF Kingston';
+  src: url('../fonts/SFKingstonRegular.otf');
 }
 
-$white:          #FFFFFF;
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+
+$navyblue:       #232735;
 $black:          #000000;
+$white:          #ffffff;
+$grey:           #d7d8d8;
 
-$text-color:  $white;
+$text-color:  $navyblue;
 
-$paragraph-font-size: 1.4rem;
-$paragraph-font-family: 'Butler Light', sans-serif;
+$paragraph-font-size: 16px;
+$paragraph-font-family: 'Raleway', sans-serif;;
 
 // navigation
-$menu-anchor-font-size: 1.4rem;
+$menu-anchor-font-size: 16px;
 $menu-achor-color: $white;
 
+// anchor tags
+$anchor-font-size: 12px;
+$achor-color-white: $white;
+$achor-color-navyblue: $navyblue;
+
 // heading
-$heading-color: $black;
-$heading-font-family: 'Work Sans', sans-serif;
+$heading-color-1: $navyblue;
+$heading-color-2: $white;
+$heading-font-family: 'Sf Kingston', sans-serif;
 $heading-font-weight: 100;
 
 //sass map function - use for heading tags
 $heading-font-size: (
+  xl: 64px,
   h1: 40px,
   h2: 36px,
   h3: 32px,
@@ -41,4 +52,4 @@ $breakpoints: (
 );
 
 $columns: 12;
-$grid-max-width: 1200px;
+$grid-max-width: 90%;

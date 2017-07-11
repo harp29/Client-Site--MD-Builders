@@ -14,7 +14,6 @@ var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var cssmin = require('gulp-cssmin');
 var htmlmin = require('gulp-htmlmin');
-var postcss = require('postcss-scss');
 
 
 var SOURCEPATHS = {

@@ -1,4 +1,3 @@
-# My Personal Portfolio
-My Personal Portfolio for Freelance and Full time Employment
+# M & D BUILDERS
 
-  
+Website redesign & development for M & D Builders

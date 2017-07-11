@@ -1,3 +1,5 @@
+@import "../1-base/variables";
+
 @mixin phone{
   @media only screen and (min-width: map-get($breakpoints, 'phone')){
     @content;
@@ -34,16 +36,49 @@
   box-sizing: border-box;
 }
 
+@mixin bg-mixin($image, $height, $width,
+  $bgPosition: center center, $bgAttachment: fixed){
+
+  background: url($image);
+  background-repeat: no-repeat;
+  background-position: $bgPosition;
+  background-size: cover;
+  background-attachment: $bgAttachment;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
 
 // TEXT MIXIN - SETS STYLES AND SIZES FOR A GIVEN TEXT BLOCK:
-@mixin text($fontSize, $letterSpacing,$wordSpacing,$textTransform,$color){
-    // font-family: $font;
+@mixin text($fontSize, $letterSpacing,$wordSpacing,$textTransform){
     font-size: $fontSize;
-    // font-weight: $fontWeight;
-
     letter-spacing: $letterSpacing;
     word-spacing: $wordSpacing;
     text-transform: $textTransform;
-
-    color: $color;
 }
+
+// BTN MIXIN
+@mixin btn-mixin($padding, $border: 1px solid, $width: 186px){
+  padding: $padding;
+  border: $border;
+  position: relative;
+  text-decoration: none;
+  width: $width;
+  display: block;
+  text-align: right;
+}
+
+// LINE AND CIRCLE - SCROLL INDICATOR MIXIN
+@mixin scroll-indicator(){
+  width: 0;
+  height: 0;
+  border-top: 20px solid $white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin: auto;
+}
+
+

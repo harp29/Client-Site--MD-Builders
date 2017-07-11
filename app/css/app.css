@@ -1,177 +1,181 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Mono|Work+Sans:100,200,300");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
 @font-face {
-  font-family: 'Butler Light';
-  src: url("../fonts/Butler_Light_Stencil.otf");
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+/*
+  1. Vertical and Horizontal Align Center
+*/
+.flex-container {
+  display: flex;
+  height: 100%;
+}
+
+.center-verticalhorizontal {
+  align-items: center;
+  justify-content: center;
+}
+
+.midcenter-verticalhorizontal {
+  margin-top: 38vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scroll-indicator {
+  width: 170px;
+  transform: rotate(-90deg);
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Sf Kingston", sans-serif;
   font-weight: 100;
 }
 
+span {
+  display: inline-block;
+}
+
+.heading {
+  font-size: 32px;
+  letter-spacing: 8px;
+  word-spacing: 5px;
+  text-transform: none;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
 a {
-  font-size: 80%;
+  font-size: 12px;
   letter-spacing: 3px;
   word-spacing: 0px;
-  text-transform: none;
-  color: #FFFFFF;
-  font: "Butler Light", sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
-  line-height: 170%;
-  transition: color .3s;
-}
-
-@media only screen and (max-width: 728px) {
-  a {
-    font-size: 50%;
-  }
-}
-
-@media only screen and (min-width: 728px) {
-  a {
-    font-size: 90%;
-  }
+  font-weight: 100;
+  font-family: "Raleway", sans-serif;
 }
 
 a:hover {
   text-decoration: none;
-  color: #19a37b;
 }
 
-p {
-  font-size: 1.4rem;
-}
-
-@font-face {
-  font-family: 'Butler Light';
-  src: url("../fonts/Butler_Light_Stencil.otf");
-}
-
-.loader-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: #000000;
-  z-index: 2;
-}
-
-.loader-page .wrapper {
-  display: table;
-  height: 100vh;
+.para-caps-holder {
+  text-align: center;
   margin: 0 auto;
 }
 
-.loader-page .wrapper .content-container {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.loader-page .wrapper .content-container .logo-container {
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.loader-page .wrapper .content-container .logo-container .logo {
-  height: 45px;
-}
-
-@media only screen and (min-width: 768px) {
-  .loader-page .wrapper .content-container .logo-container .logo {
-    height: 55px;
-  }
-}
-
-.loader-page .wrapper .content-container .caption-container {
-  width: 333px;
-  margin-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .loader-page .wrapper .content-container .caption-container {
-    width: 433px;
-  }
-}
-
-.loader-page .wrapper .content-container .caption-container .word-break {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader-page .wrapper .content-container .chared-word-break {
-  font-size: 70%;
-  letter-spacing: 2px;
-  word-spacing: 0px;
-  text-transform: none;
-  color: #FFFFFF;
-  text-align: center;
-  line-height: 180%;
-}
-
-@media only screen and (min-width: 768px) {
-  .loader-page .wrapper .content-container .chared-word-break {
-    font-size: 100%;
-  }
-}
-
-.loader-page .wrapper .content-container .letter-spacing-large {
-  letter-spacing: 17px;
-}
-
-.loader-page .wrapper .content-container .letter-spacing-medium {
-  letter-spacing: 13px;
-}
-
-.loader-page .wrapper .content-container .letter-spacing-small {
-  letter-spacing: 12px;
-}
-
-.loader-page .wrapper .content-container .cta-container .cta {
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-}
-
-.loader-page .wrapper .content-container .cta-container .cta .cta-text {
-  font-size: 55%;
-  letter-spacing: 5px;
-  word-spacing: 0px;
+.para-caps-holder .para-caps {
+  font-size: 87.5%;
+  letter-spacing: 3px;
+  word-spacing: 3px;
   text-transform: uppercase;
-  color: #FFFFFF;
-  text-decoration: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+.loader {
+  height: 100vh;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+.btn {
+  padding: 12px;
+  border: 1px solid;
   position: relative;
-}
-
-.loader-page .wrapper .content-container .cta-container .cta .cta-text:hover .underline-2 {
-  width: 63.5%;
-}
-
-.loader-page .wrapper .content-container .cta-container .cta .cta-text .underline {
-  display: block;
-  position: absolute;
-  height: 2px;
-  background: #FFFFFF;
-}
-
-.loader-page .wrapper .content-container .cta-container .cta .cta-text .underline-1 {
-  top: 156%;
-  left: 0;
-  width: 26%;
-}
-
-.loader-page .wrapper .content-container .cta-container .cta .cta-text .underline-2 {
-  top: 156%;
-  left: 32%;
-  width: 3.5%;
-  transition: width .3s ease-out;
-}
-
-.loader-page .wrapper .content-container .cta-container .cta .cta-text:visited, .loader-page .wrapper .content-container .cta-container .cta .cta-text:active {
-  color: #FFFFFF;
   text-decoration: none;
+  width: 186px;
+  display: block;
+  text-align: right;
+}
+
+.btn:hover:before {
+  width: 16%;
+}
+
+.btn-navyblue:after, .btn-white:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  height: 1px;
+  width: 16%;
+}
+
+.btn-navyblue:before, .btn-white:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  z-index: 2;
+  height: 1px;
+  width: 0%;
+  transition: width .4s;
+}
+
+.btn-white {
+  color: #d7d8d8;
+  border-color: #ffffff;
+}
+
+.btn-white:after {
+  background-color: #ffffff;
+}
+
+.btn-white:before {
+  background-color: #232735;
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
 }
 
 *,
@@ -186,9 +190,9 @@ p {
 
 body {
   background-color: transparent;
-  font-size: 1.4rem;
-  color: #FFFFFF;
-  font-family: "Butler Light", sans-serif;
+  font-size: 16px;
+  color: #232735;
+  font-family: "Raleway", sans-serif;
 }
 
 .xs-hidden {
@@ -229,7 +233,7 @@ img {
 @media only screen and (min-width: 1024px) {
   .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 90%;
   }
 }
 
@@ -262,188 +266,76 @@ img {
 }
 
 @font-face {
-  font-family: 'Butler Light';
-  src: url("../fonts/Butler_Light_Stencil.otf");
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+.loader {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.company-name {
+  font-size: 64px;
+  letter-spacing: 6px;
+  word-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
+}
+
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
 }
 
 .landing-page {
   width: 100%;
-  max-height: 100vh;
-  background-color: #000000;
-  overflow: hidden;
-}
-
-.landing-page .scale-down {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(1.5);
-}
-
-.landing-page .logo {
-  margin-bottom: 4%;
-}
-
-.landing-page #svg-filter {
-  position: absolute;
-}
-
-.landing-page .glitch-img-container .glitch-img {
-  filter: url("#glitch");
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 4;
-  width: 300px;
-  height: 600px;
-  overflow: hidden;
-}
-
-@media only screen and (min-width: 768px) {
-  .landing-page .glitch-img-container .glitch-img {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .landing-page .glitch-img-container .glitch-img {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-.landing-page .content-container {
-  position: relative;
   height: 100vh;
-  z-index: 5;
-  text-align: center;
+  overflow: hidden;
 }
 
-.landing-page .content-container .top-box, .landing-page .content-container .middle-box, .landing-page .content-container .bottom-box {
+.landing-page .bg-effect {
+  background: url("../img/living-room.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   position: absolute;
-}
-
-.landing-page .content-container .top-box {
   top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
-@media only screen and (min-width: 1024px) {
-  .landing-page .content-container .top-box {
-    width: 50%;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.landing-page .heading {
+  margin-bottom: 135px;
 }
 
-.landing-page .content-container .top-box .contact-info {
-  margin-bottom: 1em;
+.landing-page .para-caps-holder {
+  position: fixed;
+  bottom: 10vh;
 }
 
-@media only screen and (min-width: 768px) {
-  .landing-page .content-container .top-box .contact-info {
-    margin-bottom: 4em;
-  }
-}
-
-.landing-page .content-container .middle-box {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.landing-page .content-container .bottom-box {
-  bottom: 8%;
-}
-
-.landing-page .content-container .box-skills-container {
-  display: inline-block;
-  margin: 0 auto;
-  border: 1px solid #FFFFFF;
-}
-
-.landing-page .content-container .box-skills-container h2:first-child {
+.landing-page .para-caps-holder .para-caps {
   margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 768px) {
-  .landing-page .content-container .box-skills-container h2:first-child {
-    margin-bottom: 10%;
-  }
-}
-
-.landing-page .content-container .box-skills-container .inner-skill {
-  font-size: 20px;
-  letter-spacing: 2px;
-  word-spacing: 0px;
-  text-transform: none;
-  color: #FFFFFF;
-}
-
-@media only screen and (min-width: 768px) {
-  .landing-page .content-container .box-skills-container .inner-skill {
-    font-size: 32px;
-  }
-}
-
-.landing-page .content-container .box-skills-container .no-margin {
-  margin: 0 !important;
-}
-
-.landing-page .content-container .box-skills-container .line {
-  width: 60%;
-  height: .06rem;
-  background: grey;
-  display: none;
-  margin-bottom: 30px;
-  transform: rotate(-30deg) translate(35%);
-}
-
-.landing-page .content-container .outer-skill {
-  letter-spacing: 2px;
-  font-size: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .landing-page .content-container .outer-skill {
-    font-size: 32px;
-  }
-}
-
-.landing-page .content-container .developer-description-container {
-  width: 100%;
-  margin: 0 auto;
-  text-align: justify;
-}
-
-@media only screen and (min-width: 1024px) {
-  .landing-page .content-container .developer-description-container {
-    width: 60%;
-  }
-}
-
-.landing-page .content-container .developer-description-container .developer-description {
-  font-size: 50%;
-  letter-spacing: 2px;
-  word-spacing: 1px;
-  text-transform: none;
-  color: #FFFFFF;
-  line-height: 170%;
-}
-
-@media only screen and (min-width: 768px) {
-  .landing-page .content-container .developer-description-container .developer-description {
-    font-size: 100%;
-  }
-}
-
-.landing-page .content-container .project-links-container .project-links {
-  text-align: justify;
-  margin-bottom: 20px;
-}
-
-.landing-page .content-container .project-links-container .links {
-  font-size: 80%;
-  letter-spacing: 2px;
-  word-spacing: 0px;
-  text-transform: none;
-  color: #FFFFFF;
+@font-face {
+  font-family: 'SF Kingston';
+  src: url("../fonts/SFKingstonRegular.otf");
 }

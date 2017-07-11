@@ -1,121 +1,33 @@
-
 <div id="js-landing-page" class="landing-page">
-<div id="js-scale-down" class="scale-down">
-
-  <svg id="svg-filter">
-              <filter id="glitch">
-          <!-- var red = colorMatrix() -->
-                <feColorMatrix id="red" in="SourceGraphic" type="matrix"
-                  values="1.5 0   0   0   0
-                          0   1.5 0   0   0
-                          0   0   1.5 0   0
-                          0   0   0  1   0  "
-                  result="red"/>
-          <!-- var green = colorMatrix()-->
-                <feColorMatrix in="SourceGraphic" type="matrix"
-                  values="0   0   0   0   0
-                          0   1.1   0   0   0
-                          0   0   1   0   0
-                          0   0   0   1   0 "
-                  result="green"/>
-          <!-- var blue = colorMatrix()-->
-                <feColorMatrix in="SourceGraphic" type="matrix"
-                  values="0   0   0   0   0
-                          0   .3   0   0   0
-                          0   0   .8   0   0
-                          0   0   0   1   0 "
-                  result="blue"/>
-          <!-- red = red.Offset() -->
-                <feOffset in="red" result="red" dx="0">
-                  <animate attributeName="dx" attributeType="XML" values="15; -12; 0; 0; 0; 0; 0;0;0;0;0;" dur="2s" repeatCount="indefinite"/>
-                  <animate attributeName="dy" attributeType="XML" values="15;  -15; 0; 0; 0; 0; 0;0;0;0;0;" dur="2.5s" repeatCount="indefinite"/>
-                </feOffset>
-                <feOffset in="green" result="green" dx="0">
-                  <animate attributeName="dx" attributeType="XML" values="   24; -5; 0; 0; 0; 0; 0;0;0;0;0;" dur="2.5s" repeatCount="indefinite"/>
-                  <animate attributeName="dy" attributeType="XML" values=" 16; -20; 0; 0; 0; 0; 0;0;0;0;0;" dur="1.9s" repeatCount="indefinite"/>
-                </feOffset>
-                <feOffset in="blue" result="blue" dx="0">
-                  <animate attributeName="dx" attributeType="XML" values="   8; -28; 0; 0; 0; 0; 0;0;0;0;0;" dur="2.7s" repeatCount="indefinite"/>
-                  <animate attributeName="dy" attributeType="XML" values=" 22; -4; 0; 0; 0; 0; 0;0;0;0;0;" dur="1.9s" repeatCount="indefinite"/>
-                </feOffset>
-              <feBlend in="red" in2="green" mode="screen" result="blend" />
-              <feBlend in="blend" in2="blue"  mode="screen" result="blend" />
-            <feGaussianBlur in="blend" stdDeviation="1">
-              <animate attributeName="stdDeviation" attributeType="XML" values="1 10; 0; 0; 0" dur="3s" repeatCount="indefinite"/>
-            </feGaussianBlur>
-            </filter>
+  <div id="js-bg-effect" class="bg-effect">
+    <div class="flex-container midcenter-verticalhorizontal">
+      <h1 id="js-welcome-message" class="heading color-white">
+        Quality driven, Professional Engineering & Contracting
+      </h1>
+      <div class="para-caps-holder">
+        <p class="para-caps color-white">
+          scroll down
+        </p>
+        <div class="scroll-indicator">
+          <svg id="Layer_1" data-name="Layer 1"
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 234.49 14.81">
+            <defs>
+              <style>
+                .cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;}.cls-2{fill:#fff;}
+              </style>
+            </defs>
+            <title>arrow</title>
+            <g id="Navbar">
+              <line class="cls-1" x1="11.94" y1="7.41" x2="100" y2="7.41"/>
+              <polygon class="cls-2" points="17.56 14.81 14.41 7.41 17.56 0 0 7.41 17.56 14.81"/>
+            </g>
           </svg>
-
-
-
-
-      <div class="container">
-        <div class="row">
-
-          <div id="js-glitch-image-container" class="xs-hidden glitch-img-container">
-            <div id="js-glitch-img" class="glitch-img">
-                <!-- <img src="img/harp.jpg" height="700" width="700" alt=""> -->
-              </div>
-          </div>
-
-        <div class="small-column-12 medium-column-12 large-column-12">
-            <div id="js-content-container" class="content-container">
-              <div class="top-box">
-                <div class="logo">
-                  <a>dbh</a>
-                </div>
-                <div class="contact-info">
-                  <a href="mailto:designsbyharp@gmail.com?subject=The%20subject%20of%20the%20mail">Email / </a> <a href="">Linkden /</a>
-                  <a href="https://github.com/harp29?tab=repositories">Github /</a> <a href="https://www.facebook.com/designsnone?lst=100014189554104%3A100014189554104%3A1495763373">Facebook</a>
-                </div>
-                <div class="projects">
-                  <a href="http://asganelectricalsolutions.ca/" target="_blank">Asgan</a>
-                  <a href="https://harp29.github.io/The-Lube-King/" target="_blank">- The Lube King</a>
-                  <a class="in-development" href="#">- Cervini Bhatia(In development)</a>
-                  <a class="in-development" href="#">- Barber & Beauty Salon(In development)</a>
-                  <a class="in-development" href="#">- Home Life Renovation inc.(In development)</a>
-                  <a class="in-development" href="#">- Black Bird(In development)</a>
-                  <a class="in-development" href="#">- Mood(In development)</a>
-                </div>
-                <div class="experiments">
-                    <a href="https://github.com/harp29?tab=repositories" target="_blank">Experiments</a>
-                </div>
-              </div>
-
-            <!-- <div class="middle-box">
-              <h6 class="outer-skill">
-                Front-End
-              </h6>
-              <div class="box-skills-container">
-                <h6 class="inner-skill">
-                  Developer
-                </h6>
-                <h6 class="inner-skill">
-                  Ux/Ui
-                </h6>
-              </div>
-              <h6 class="outer-skill skill">Designer</h6>
-            </div> -->
-
-          <div class="bottom-box">
-            <div class="developer-description-container">
-              <p class="developer-description">
-                Hello, My name is Harpreet Singh and I’m a passionate Front-End
-                Developer and UX/UI Designer. I’m currently available for freelance
-                and fulltime employment.
-                If you like my work then feel free to
-                contact me at your convincence.
-                Thank you for stopping by.
-              </p>
-            </div>
-          </div>
-
-            </div>
-
         </div>
+      </div>
+
 
     </div>
   </div>
 
-</div>
 </div>

@@ -1,0 +1,50 @@
+@import "../1-base/variables";
+@import "../5-helper/mixins";
+
+.btn{
+  @include btn-mixin(12px);
+
+  &:hover {
+    &:before{
+      width: 16%;
+    }
+
+  }
+}
+
+.btn-navyblue, .btn-white{
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    height: 1px;
+    width: 16%;
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    z-index: 2;
+
+    height: 1px;
+    width: 0%;
+    transition: width .4s;
+  }
+}
+
+.btn-white{
+  color: $grey;
+  border-color: $white;
+
+  &:after{
+    background-color: $white;
+  }
+
+  &:before{
+    background-color: $navyblue;
+  }
+}

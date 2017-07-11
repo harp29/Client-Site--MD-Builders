@@ -1,0 +1,18 @@
+@import "../1-base/variables";
+@import "../5-helper/mixins";
+
+.loader{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width:100%;
+}
+
+.company-name{
+  @include text(map-get($heading-font-size, xl), 6px, 3px, uppercase);
+}

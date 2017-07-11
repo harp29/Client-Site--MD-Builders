@@ -18184,183 +18184,118 @@ return jQuery;
 },{}],3:[function(require,module,exports){
 const animations=()=>{
 
-  //Universal Variables
-  const $body = $('body');
+/*
 
-  // Loading Variables
-  const $jsContentContainer = $('#js-content-container');
-  const $jsLoaderPage = $('#js-loader-page');
-  const $wordBreakElement = $('#js-caption-wordbreak');
-  const $jsLogoContainer = $('#js-logo-container');
-  const $jsDiscoverCta = $('#js-discover-cta');
-  const tlLoad = new TimelineLite();
+    Loading Page Animation Tasks:
+    1. Fade in #js-company-name: 5s
+    2. Fade out #js-company-name: 5s with 1 delay of start
+    3. loading page display none
 
-  // Landing Variables
-  const $scaleDown = $('#js-scale-down');
-  const tlLand = new TimelineLite();
+    Landing Page Animation Tasks:
+    1. Grow Landing Bg Image from the bottom: 0vh -> 100vh: 3s
 
-//Loading effects:
-  tlLoad
-   .set($body, {overflow: 'hidden'})
-   .call(wordBreak($wordBreakElement))
-   .to($jsLogoContainer, 1.5, {opacity:'1', autoAlpha:'1', ease:Power4.easeInOut}, '+=3')
-   .to($jsDiscoverCta, 1.5, {opacity:'1', autoAlpha:'1', ease:Power4.easeInOut}, '-=1.2');
+*/
 
+  //-------------------------- Variables ---------------------------------//
 
-//Landing Page effects onclick
-  $jsDiscoverCta.click(function(){
+  $body = $('body');
 
-    tlLand
-     .to($jsLoaderPage, .7, {opacity: '0', autoAlpha: '0', ease: Power2.easeOut})
-     .set($jsLoaderPage, {display:'none'})
-     .to($scaleDown, .6, {opacity: '1', autoAlpha: '1', scale: '1', ease: Power4.easeOut}, '-=.2')
+  //Loading Page:
+  let $jsCompanyName = $('#js-company-name'),
+      $jsLoadingPage = $('#js-loader');
 
-  });
+  //Landing Page:
+    let $jsLandingPage = $('#js-landing-page'),
+        $jsBgEffect = $('#js-bg-effect');
 
 
-}
 
-(function() {
-  var jQuery = $ = require('jquery');
+//-------------------------- Initialize ---------------------------------//
 
-var set = function(x, opts) {
 
-    var _pt = [{
+  (function init(){
 
-      x: 0,
-      y: 0
-    }, {
-      x: 0,
-      y: 0
-    }, {
-      x: 0,
-      y: 0
+      //Loading:
+      TweenMax.set($jsCompanyName, {opacity: 0, autoAlpha: 0});
 
-    }];
+      //Landing:
+      TweenMax.set($body, {overflow: 'hidden'});
+      TweenMax.set($jsBgEffect, {bottom: '100vh', scale: 1});
 
-    var rnd1 = [Math.random() + 1, Math.random() + 1, Math.random() + 1];
-    var rnd2 = [0, 0, 0];
-    var cnt = 0;
-    var arr = [];
-    var loop = null;
-    var t = null;
-    var _h = opts._h;
-    var _w = opts._w;
-    var img = opts.img;
-    var mshov = false;
+  })();
 
-    x.css({
-      position: "absolute"
-    });
+//-------------------------- Function Calls ---------------------------------//
 
-    for (var i = 0; i < _h; i++) {
+  gsapAnimations();
 
-      var pos = -i + "px";
-      x.append("<div></div>");
-      x.find("div").eq(i).css({
 
-        backgroundImage: "url(" + img + ")",
-        backgroundPosition: "0px " + pos,
-        backgroundSize: 'cover',
-        height: "1px",
-        width: _w + "px",
-        position: "absolute",
-        top: i + "px"
+//-------------------------- Function Creation ---------------------------------//
 
-      });
+  //gsapAnimations function
+  function gsapAnimations(){
 
-      arr.push(x.find("div").eq(i));
+    //Loading page timeline + animations
+    let loadingTimeline = new TimelineMax({delay: .8, onComplete: function(){
+            TweenLite.set($jsLoadingPage, {opacity: 0, autoAlpha: 0, display: 'none'})
+       }
+     });
 
-    }
+    loadingTimeline
+      .to($jsCompanyName, 3, {opacity: 1, autoAlpha: 1, ease: Power4.easeOut})
+      .to($jsCompanyName, .8, {opacity: 0, autoAlpha: 0})
 
-    if (opts.auto) {
-      setInterval(function() {
-        if (mshov) return;
-        go();
 
-        setTimeout(pause, opts.delay / 2 * Math.random());
-      }, opts.delay);
-    }
+    //Landing Page timeline + animations
+    let landingTimeline = new TimelineMax({onComplete: function(){
+            // $jsScrollIndicator.addClass('scroll-line-animation');
+          }
+       });
 
-    x.mouseover(go);
-    x.mouseout(pause);
+    landingTimeline
+        .to($jsBgEffect, 1.7, {bottom: '0vh', ease: Power4.easeOut})
 
-    function go() {
 
-      mshov = true;
-      clearInterval(loop);
-      loop = setInterval(run, 30);
 
-    }
+    //master timeline
+    let masterTimeline = new TimelineLite();
+    masterTimeline
+      .add(loadingTimeline)
+      .add(landingTimeline, '-=.4')
 
-    function pause() {
+  }
 
-      mshov = false;
-      clearInterval(loop);
-      loop = null;
+//-------------------------- Click Function Creation ---------------------------------//
 
-      for (var i = 0; i < _h; i++) {
-        arr[i].css({
-          left: 0
-        });
-      }
+// landing page btn
+// $body.click(function(){
+//
+//   let landingTransitionTimeline = new TimelineLite();
+//
+//   landingTransitionTimeline
+//     .to($testFrame, 4, {left: '50%', bottom: '0'})
+//     // .to($jsBgGrow, 4, {x: '50%', backgroundPositionX: '-30%', ease: Power4.easeOut})
+//     // .to($jsFrameBgGrow, .7, {width: '60%', height: '100%', ease: Power4.linear})
+//     // .to($jsBgGrow, .7, {width: '80%', height: '100%', ease: Power4.linear}, '0')
+//     // .addLabel('height-shrink')
+//     //.to($jsBgGrow, 5.5, {height: '400px', width: '400px', ease: Power4.easeInOut})
+//     // .to($jsBgGrow, .7, {height: '70%', width: '70%', ease: Power4.linear}, 'height-shrink')
+// });
 
-    }
 
-    function run() {
 
-      var i;
-      for (i = 0; i < _pt.length; i++) {
-        if (rnd1[i] >= 1) {
-          --rnd1[i];
-          rnd2[i] = Math.random() / 4 + 0.03;
-        }
-        rnd1[i] += rnd2[i];
-        cnt += (38 - cnt) * 0.25;
-        _pt[i].x = Math.ceil(Math.sin(rnd1[i] * Math.PI * 2) * rnd2[i] * cnt * 2);
-        _pt[i].y = 0;
-      }
-      var num = (Math.abs(_pt[0].x) + Math.abs(_pt[1].x) + Math.abs(_pt[2].x) + 8) / 4;
 
-      i = _h;
+};
+//END OF ANIMATION FUNCTION
 
-      while (i -= 1) {
-
-        var _off = Math.sin(i / _h * Math.PI * 4 * (Math.random() / 8 + 1)) * 0.8 * num * num;
-        arr[i].css({
-          left: _off + "px "
-        });
-
-      }
-
-    }
-  };
-
-  $.fn.noisy = function(opts) {
-    this.each(function() {
-      opts = $.extend({}, $.fn.noisy.defs, opts);
-      set($(this), opts);
-    });
-  };
-
-  $.fn.noisy.defs = {
-    _h: 0,
-    _w: 0,
-    img: "",
-    auto: true,
-    delay: 2000
-  };
-
-})();
 
 
 //set height
 const setHeight =()=>{
 
   let windowHeight = $(window).innerHeight();
-  $('#js-landing-page').css({
-    maxheight: windowHeight
-  });
+  // $('#js-landing-page').css({
+  //   maxheight: windowHeight
+  // });
 
 };
 
@@ -18372,66 +18307,8 @@ $(document).ready(function(){
 
   animations();
 
-  $("#js-glitch-img").noisy({
-    _w: 300,
-    _h: 600,
-    img: "img/developer-test.jpg",
-    delay: 2000
-  });
-
-  $(window).resize(function(){
-    setHeight();
-  })
-
-
 });
 
-//break each word up into chars
-//1) get the text, 2) make it uppercase, 3) split text "", 4) sort (placing all into an array  of strings each char seperated)
-//5) loop through and print each char, 6)
-const wordBreak=(element)=>{
-
-    const lineBreak = $('<br>');
-
-    const textBlock = element.text();
-    element.empty();
-
-    const tcSplit = textBlock.split("");
-    const tcSort = tcSplit.sort();
-
-    for (let i = 0; i < textBlock.length; i++) {
-      const char = textBlock.split("")[i];
-
-      var charDiv = $('<span>').append(char);
-      charDiv.attr('id', i)
-      charDiv.css({
-          opacity:'0'
-      });
-
-      element.css({
-        opacity: '1',
-        visibility: 'visible'
-      }).addClass('chared-word-break');
-
-      //Letter spacing for spans:
-        // $('#18').addClass('letter-spacing-large');
-        // $('#21').addClass('letter-spacing-large');
-        // $('#29').addClass('letter-spacing-large');
-        // $('#38').addClass('letter-spacing-large');
-        // $('#70').addClass('letter-spacing-large');
-        // $('#74').addClass('letter-spacing-small');
-        // $('#77').addClass('letter-spacing-medium');
-        // $('#80').addClass('letter-spacing-small');
-
-      element.append(charDiv);
-
-      charDiv.delay(tcSort.indexOf(char) * 30).animate({
-          opacity:'1'
-      },1200);
-
-
-    };
-    return element;
-};
+//Single char 
 
 },{"gsap":1,"jquery":2}]},{},[3])

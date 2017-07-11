@@ -6,24 +6,56 @@ h1,h2,h3,h4,h5,h6{
   font-weight: $heading-font-weight;
 }
 
+span{
+  display: inline-block;
+}
+
+.heading{
+  @include text(map-get($heading-font-size, h3), 8px, 5px, none);
+}
+
+.color-white{
+  color: $white;
+}
+
 a{
-  @include text(80%,3px,0px,none, $text-color);
-  @media only screen and(max-width: 728px){
-    font-size: 50%;
-  }
-  @media only screen and(min-width: 728px){
-    font-size: 90%;
-  }
-  font: $paragraph-font-family;
+  @include text($anchor-font-size,3px,0px,uppercase);
   text-decoration: none;
-  line-height: 170%;
-  transition: color .3s;
+  font-weight: 100;
+  font-family: $paragraph-font-family;
 
   &:hover{
     text-decoration: none;
-    color: #19a37b;
   }
 }
+
+.para-caps-holder{
+  text-align: center;
+  margin: 0 auto;
+  .para-caps{
+    @include text(87.5%,3px,3px,uppercase);
+  }
+}
+
+
+// a{
+//
+//   @media only screen and(max-width: 728px){
+//     font-size: 50%;
+//   }
+//   @media only screen and(min-width: 728px){
+//     font-size: 90%;
+//   }
+//   font: $paragraph-font-family;
+//   text-decoration: none;
+//   line-height: 170%;
+//   transition: color .3s;
+//
+//   &:hover{
+//     text-decoration: none;
+//     color: #19a37b;
+//   }
+// }
 
 p{
   font-size: $paragraph-font-size;

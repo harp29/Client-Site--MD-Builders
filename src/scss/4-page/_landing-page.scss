@@ -3,149 +3,24 @@
 
 .landing-page{
   width: 100%;
-  max-height: 100vh;
-  background-color: $black;
+  height: 100vh;
+
   overflow: hidden;
 
-  .scale-down{
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.5);
+  .bg-effect{
+    @include bg-mixin('../img/living-room.jpeg', 100%, 100%);
+    overflow: hidden;
   }
 
-  .logo{
-    margin-bottom: 4%;
+  .heading{
+    margin-bottom: 135px;
   }
 
-  #svg-filter{
-    position: absolute;
-  }
-
-
-    .glitch-img-container{
-      .glitch-img{
-        filter: url('#glitch');
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 4;
-        width: 300px;
-        height: 600px;
-        overflow: hidden;
-        @include tablet{
-          transform: translate(-50%, -50%) scale(1);
-        }
-        @include desktop{
-          transform: translate(-50%, -50%) scale(1);
-        }
-      }
-    }
-
-  .content-container{
-    position: relative;
-    height: 100vh;
-    z-index: 5;
-    text-align: center;
-
-    .top-box, .middle-box, .bottom-box{
-      position: absolute;
-    }
-
-    .top-box{
-      top: 0;
-      @include desktop{
-        width: 50%;
-        margin: 0 auto;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .contact-info{
-        margin-bottom: 1em;
-        @include tablet{
-          margin-bottom: 4em;
-        }
-      }
-    }
-
-    .middle-box{
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .bottom-box{
-      bottom: 8%;
-    }
-
-    .box-skills-container{
-      display: inline-block;
-      margin: 0 auto;
-      border:1px solid $white;
-
-      h2:first-child{
-        margin-bottom: 10px;
-        @include tablet{
-          margin-bottom: 10%;
-        }
-      }
-      .inner-skill{
-        font-size: map-get($heading-font-size, h6);
-        @include text(null,2px,0px,none, $white);
-        @include tablet{
-          font-size: 32px;
-        }
-      }
-      .no-margin{
-        margin: 0 !important;
-      }
-      .line{
-        width: 60%;
-        height: .06rem;
-        background: grey;
-        display: none;
-        margin-bottom: 30px;
-        transform: rotate(-30deg) translate(35%);
-      }
-    }
-
-    .outer-skill{
-      letter-spacing: 2px;
-      font-size: map-get($heading-font-size, h6);
-      @include tablet{
-        font-size: 32px;
-      }
-    }
-
-    .developer-description-container{
-      width: 100%;
-      margin: 0 auto;
-      text-align: justify;
-      @include desktop{
-        width: 60%;
-      }
-
-      .developer-description{
-        @include text(50%,2px,1px,none, $text-color);
-        line-height: 170%;
-        @include tablet{
-          font-size: 100%;
-        }
-      }
-    }
-    .project-links-container{
-      .project-links{
-        text-align: justify;
-        margin-bottom: 20px;
-      }
-
-      .links{
-        @include text(80%,2px,0px,none, $text-color);
-      }
+  .para-caps-holder{
+    position: fixed;
+    bottom: 10vh;
+    .para-caps{
+      margin-bottom: 10px;
     }
   }
-
-
-
-
 }

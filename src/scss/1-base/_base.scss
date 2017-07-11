@@ -1,0 +1,26 @@
+@import "../5-helper/mixins";
+/*
+  1. Vertical and Horizontal Align Center
+*/
+
+.flex-container{
+  display: flex;
+  height: 100%;
+}
+
+.center-verticalhorizontal{
+  align-items: center;
+  justify-content: center;
+}
+
+.midcenter-verticalhorizontal{
+  margin-top: 38vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scroll-indicator{
+  width: 170px;
+  transform: rotate(-90deg);
+}
+

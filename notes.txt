@@ -1,8 +1,20 @@
-#1
-  Content adjustment - done
-  Image scale issue: slow down - done
-  resize landing page to 100vh
-  favicon
+ANIMATION EFFECTS:
+
+KEEP IT SIMPLE:
+
+  Images: Eginstill like effects: GROW, SHRINK, AND SCALING.
+  For scroll as well.
+
+  TEXT EFFECT: Appear - fade in.
+
+  Thats it stop making it complicated, keep it simple and elegant.
+
+----------------------------------------------------------------
+
+#1 LOADING PAGE
+
+
+  1. TEXT EFFECT to title
 
 ----------------------------------------------------------------
 

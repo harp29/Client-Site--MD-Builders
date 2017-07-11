@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "md-builders",
   "version": "1.0.0",
-  "description": "Company Portfolio",
+  "description": "Client Website - redesign & development",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {},
@@ -10,14 +10,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harp29/Designs-by-Harp.git"
+    "url": "git+https://github.com/harp29/Client-Website---M-D-Builders.git"
   },
-  "author": "Harpreet Singh",
+  "keywords": [
+    "redesign",
+    "and",
+    "development:",
+    "UX/UI",
+    "Front-end",
+    "Development(Gulp",
+    "Sass",
+    "Vanilla",
+    "JS",
+    "jQuery",
+    "responsive",
+    "HTML",
+    "Github"
+  ],
+  "author": "Harpreet Singh - Designs by Harp",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/harp29/Designs-by-Harp/issues"
+    "url": "https://github.com/harp29/Client-Website---M-D-Builders/issues"
   },
-  "homepage": "https://github.com/harp29/Designs-by-Harp#readme",
+  "homepage": "https://github.com/harp29/Client-Website---M-D-Builders#readme",
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.18.11",
@@ -34,7 +49,6 @@
     "gulp-inject-partials": "^1.0.3",
     "gulp-minify": "^1.0.0",
     "gulp-newer": "^1.3.0",
-    "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "jquery": "^3.2.1",

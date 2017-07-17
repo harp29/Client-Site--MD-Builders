@@ -1,13 +1,6 @@
 ANIMATION EFFECTS:
 
-KEEP IT SIMPLE:
 
-  Images: Eginstill like effects: GROW, SHRINK, AND SCALING.
-  For scroll as well.
-
-  TEXT EFFECT: Appear - fade in.
-
-  Thats it stop making it complicated, keep it simple and elegant.
 
 ----------------------------------------------------------------
 
